@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CompareNumbers</string>
+    <string name="titulo">DIGITE OS VALORES</string>
+    <string name="testar">Testar</string>
+    <string name="primeiro_valor">Primeiro Valor</string>
+    <string name="segundo_valor">Segundo Valor</string>
+</resources>
