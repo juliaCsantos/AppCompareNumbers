@@ -22,18 +22,24 @@ class MainActivity : AppCompatActivity() {
     private fun compare(view: View){
         val valor1 = findViewById<EditText>(R.id.val1)
         val valor2 = findViewById<EditText>(R.id.val2)
-
+        if(valor1.text.toString().isEmpty() || valor2.text.toString().isEmpty()){
+            Toast.makeText(this, "Valor nulo inválido! Digite um número", Toast.LENGTH_SHORT).show()
+        }
+        else{
             val num1 = Integer.parseInt(valor1.text.toString())
             val num2 = Integer.parseInt(valor2.text.toString())
 
-        if(num1 > num2){
-            Toast.makeText(this, "O primeiro valor é maior", Toast.LENGTH_SHORT).show()
+            if(num1 > num2){
+                Toast.makeText(this, "O primeiro valor é maior", Toast.LENGTH_SHORT).show()
+            }
+            if(num2 >num1){
+                Toast.makeText(this, "O segundo valor é maior", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this, "Os valores são iguais", Toast.LENGTH_SHORT).show()
+            }
         }
-        if(num2 >num1){
-            Toast.makeText(this, "O segundo valor é maior", Toast.LENGTH_SHORT).show()
-        }
-        else{
-            Toast.makeText(this, "Os valores são iguais", Toast.LENGTH_SHORT).show()
-        }
+
+
     }
 }
